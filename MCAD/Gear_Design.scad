@@ -511,9 +511,6 @@ module transmission_case() {
     }
 }
 
-//----------------------------
-// Top-Level Module
-//----------------------------
 module gearbox() {
     if (cutaway_view) {
         difference() {
@@ -541,15 +538,8 @@ module gearbox() {
     }
 }
 
-//----------------------------
-// Render the Gearbox
-//----------------------------
 gearbox();
 
-//----------------------------
-// (Optional) Print Ratios
-// Uncomment if you want ratio info in console (OpenSCAD echo).
-//----------------------------
 echo("1st gear ratio = ", calc_ratio(layshaftFirstTeeth * layshaftDriveTeeth, outputFirstTeeth * inputDriveTeeth));
 echo("2nd gear ratio = ", calc_ratio(layshaftSecondTeeth * layshaftDriveTeeth, outputSecondTeeth * inputDriveTeeth));
 echo("3rd gear ratio = ", calc_ratio(layshaftThirdTeeth * layshaftDriveTeeth, outputThirdTeeth * inputDriveTeeth));
